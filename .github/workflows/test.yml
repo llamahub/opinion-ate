@@ -6,7 +6,7 @@ jobs:
     name: Test
     runs-on: ubuntu-16.04
     env:
-      CLIENT_FOLDER:./client
+      CLIENT_FOLDER: ./client
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
