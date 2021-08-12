@@ -10,4 +10,9 @@ describe('HelloWorld.vue', () => {
     
     expect(wrapper.text()).toMatch(msg);
   });
+
+  it('should create', () => {
+    let component: HelloWorld;
+    expect(component).toBeTruthy();
+  }
 });
