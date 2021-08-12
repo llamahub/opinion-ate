@@ -2,7 +2,7 @@
 
 + An app for tracking reviews of dishes at different restaurants.
 
-+ Production: <https://your-netlify-domain.netlify.app>
++ Production: <github.com/llamahub/opinion-ate>
 
 
  ## Project setup
