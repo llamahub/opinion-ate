@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile --cwd ${env.CLIENT_FOLDER}
+        run: yarn install --frozen-lockfile --cwd $CLIENT_FOLDER
       - name: Unit Tests
-        run: yarn --cwd ${env.CLIENT_FOLDER} test:unit
+        run: yarn --cwd $CLIENT_FOLDER test:unit
       - name: E2E tests
-        run: yarn --cwd ${env.CLIENT_FOLDER} test:e2e --headless
+        run: yarn --cwd $CLIENT_FOLDER test:e2e --headless
