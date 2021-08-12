@@ -4,7 +4,7 @@ on: [push]
 jobs:
   test:
     name: Test
-    runs-on: ubuntu-16.04
+    runs-on: debian:10
     env:
       CLIENT_FOLDER: ./client
     steps:
