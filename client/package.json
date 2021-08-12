@@ -39,5 +39,21 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/node_modules"
+    ],
+    "testPathIgnorePatterns": [
+      ".git/.*",
+      "node_modules/.*",
+      "src/.*"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/.*",
+      ".*\\.js"
+    ]
   }
 }

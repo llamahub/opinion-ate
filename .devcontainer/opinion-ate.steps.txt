@@ -3,3 +3,19 @@
 ================================================================================
 
 https://outsidein.dev/vue/2-project-setup.html#setting-up-development-environment
+
+
+1. create app
+vue create opinion-ate
+
+2. set up autoformatting and linting
+yarn lint
+
+3. run tests
+yarn test:unit
+
+# tried to improve test performance per these links:
+https://stackoverflow.com/questions/45087018/jest-simple-tests-are-slow
+https://itnext.io/how-to-make-your-sluggish-jest-v23-tests-go-faster-1d4f3388bcdd
+https://github.com/facebook/jest/issues/7963
+
