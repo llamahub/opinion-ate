@@ -2,6 +2,8 @@
 [ opinion-ate ] Steps
 ================================================================================
 
+These are the steps and notes taken while building this application.  Based off these instructions:
+
 https://outsidein.dev/vue/2-project-setup.html#setting-up-development-environment
 
 
@@ -52,3 +54,15 @@ https://medium.com/@mreichelt/how-to-show-x11-windows-within-docker-on-mac-50759
 ```
 XQartz Terminal>  xhost + 127.0.0.1
 ```
+
+## 5. add CI with github actions
+
+* .github/workflows/test.yml file determines the test build
+
+## 6. add CD with Netify
+
+
+* signed of for Netlify account using incatrex github acct:
+https://app.netlify.com/sites/incatrex-opinion-ate/deploys
+
+
