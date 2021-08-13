@@ -31,21 +31,15 @@ describe('RestaurantList', () => {
   const localVue = createLocalVue();
   localVue.use(Vuex);
 
+  const findByTestId = (wrapper, testId, index) =>
+    wrapper.findAll(`[data-testid="${testId}"]`).at(index);
+
   it('loads restaurants on mount', () => {
     expect(restaurantsModule.actions.load).toHaveBeenCalled();
   });
 
   it('displays the restaurants', () => {
-    const firstRestaurantName = wrapper
-      .findAll('[data-testid="restaurant"]')
-      .at(0)
-      .text();
-    expect(firstRestaurantName).toBe('Sushi Place');
-
-    const secondRestaurantName = wrapper
-      .findAll('[data-testid="restaurant"]')
-      .at(1)
-      .text();
-    expect(secondRestaurantName).toBe('Pizza Place');
+    expect(findByTestId(wrapper, 'restaurant', 0).text()).toBe('Sushi Place');
+    expect(findByTestId(wrapper, 'restaurant', 1).text()).toBe('Pizza Place');
   });
 });
