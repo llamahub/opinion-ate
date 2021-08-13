@@ -22,10 +22,10 @@ describe('RestaurantList', () => {
   let restaurantsModule;
   let wrapper;
 
-  beforeEach(() => {
+  const mountWithStore = (state = {records}) => {
     restaurantsModule = {
       namespaced: true,
-      state: {records},
+      state,
       actions: {
         load: jest.fn().mockName('load'),
       },
@@ -37,14 +37,30 @@ describe('RestaurantList', () => {
     });
 
     wrapper = mount(RestaurantList, {localVue, store, vuetify});
-  });
+  };
 
   it('loads restaurants on mount', () => {
+    mountWithStore();
     expect(restaurantsModule.actions.load).toHaveBeenCalled();
   });
 
   it('displays the restaurants', () => {
+    mountWithStore();
     expect(findByTestId(wrapper, 'restaurant', 0).text()).toBe('Sushi Place');
     expect(findByTestId(wrapper, 'restaurant', 1).text()).toBe('Pizza Place');
+  });
+
+  it('displays the loading indicator while loading', () => {
+    mountWithStore({loading: true});
+    expect(wrapper.find('[data-testid="loading-indicator"]').exists()).toBe(
+      true,
+    );
+  });
+
+  it('does not display the loading indicator while not loading', () => {
+    mountWithStore({loading: false});
+    expect(wrapper.find('[data-testid="loading-indicator"]').exists()).toBe(
+      false,
+    );
   });
 });
