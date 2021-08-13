@@ -11,8 +11,13 @@ describe('HelloWorld.vue', () => {
     expect(wrapper.text()).toMatch(msg);
   });
 
-  it('should create', () => {
-    let component: HelloWorld;
-    expect(component).toBeTruthy();
-  }
+  it('renders props.msg when passed', () => {
+    const msg = 'another new message';
+    const wrapper = shallowMount(HelloWorld, {
+      propsData: { msg },
+    });
+
+    expect(wrapper.text()).toMatch(msg);
+  });
+
 });
