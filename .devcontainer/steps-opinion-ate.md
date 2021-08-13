@@ -76,4 +76,19 @@ https://outsidein.dev/vue/3-vertical-slice.html#end-to-end-test
 https://outsidein.dev/vue/3-vertical-slice.html#stepping-down-to-a-unit-test
 https://outsidein.dev/vue/3-vertical-slice.html#stepping-back-up
 https://outsidein.dev/vue/3-vertical-slice.html#unit-testing-the-store
+https://outsidein.dev/vue/3-vertical-slice.html#creating-the-api-client
+
+* had to add axios:
+```
+yarn add axios
+```
+
+## 9. Refactoring Styles
+https://outsidein.dev/vue/4-refactoring-styles.html#_4-refactoring-styles
+
+* Add Vuetify
+````
+vue add vuetify
+
+```
 
