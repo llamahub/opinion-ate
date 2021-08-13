@@ -66,3 +66,7 @@ XQartz Terminal>  xhost + 127.0.0.1
 https://app.netlify.com/sites/incatrex-opinion-ate/deploys
 
 
+## 7. README.cmd
+https://outsidein.dev/vue/2-project-setup.html#filling-in-the-readme
+
+
