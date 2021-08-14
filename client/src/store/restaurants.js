@@ -5,7 +5,7 @@ const restaurants = api => ({
     loading: false,
   },
   actions: {
-    load({ commit }) {
+    load({commit}) {
       commit('startLoading');
       api.loadRestaurants().then(records => {
         commit('storeRecords', records);

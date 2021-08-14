@@ -22,7 +22,7 @@ describe('RestaurantList', () => {
   let restaurantsModule;
   let wrapper;
 
-  const mountWithStore = (state = { records, loading: false }) => {
+  const mountWithStore = (state = {records, loading: false}) => {
     restaurantsModule = {
       namespaced: true,
       state,
@@ -45,11 +45,10 @@ describe('RestaurantList', () => {
   });
 
   describe('when loading succeeds', () => {
-
     beforeEach(() => {
       mountWithStore();
     });
-    
+
     it('displays the restaurants', () => {
       expect(findByTestId(wrapper, 'restaurant', 0).text()).toBe('Sushi Place');
       expect(findByTestId(wrapper, 'restaurant', 1).text()).toBe('Pizza Place');
@@ -60,9 +59,7 @@ describe('RestaurantList', () => {
         false,
       );
     });
-
   });
-
 
   it('displays the loading indicator while loading', () => {
     mountWithStore({loading: true});
@@ -73,12 +70,11 @@ describe('RestaurantList', () => {
 
   describe('when loading fails', () => {
     beforeEach(() => {
-      mountWithStore({ loadError: true });
+      mountWithStore({loadError: true});
     });
 
     it('displays the error message', () => {
       expect(wrapper.find('[data-testid="loading-error"]').exists()).toBe(true);
     });
   });
-
 });

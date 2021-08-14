@@ -16,12 +16,12 @@ describe('restaurants', () => {
       expect(store.state.restaurants.loading).toEqual(false);
     });
   });
-  
+
   describe('load action', () => {
     describe('while loading', () => {
       it('sets a loading flag', () => {
         const api = {
-          loadRestaurants: () => new Promise(() => { }),
+          loadRestaurants: () => new Promise(() => {}),
         };
         const store = new Vuex.Store({
           modules: {
@@ -35,8 +35,8 @@ describe('restaurants', () => {
 
     describe('when loading succeeds', () => {
       const records = [
-        { id: 1, name: 'Sushi Place' },
-        { id: 2, name: 'Pizza Place' },
+        {id: 1, name: 'Sushi Place'},
+        {id: 2, name: 'Pizza Place'},
       ];
 
       let store;
@@ -53,8 +53,8 @@ describe('restaurants', () => {
         });
 
         return store.dispatch('restaurants/load');
-      })
-      
+      });
+
       it('stores the restaurants', () => {
         expect(store.state.restaurants.records).toEqual(records);
       });
