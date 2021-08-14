@@ -71,4 +71,14 @@ describe('RestaurantList', () => {
     );
   });
 
+  describe('when loading fails', () => {
+    beforeEach(() => {
+      mountWithStore({ loadError: true });
+    });
+
+    it('displays the error message', () => {
+      expect(wrapper.find('[data-testid="loading-error"]').exists()).toBe(true);
+    });
+  });
+
 });
