@@ -66,3 +66,29 @@ XQartz Terminal>  xhost + 127.0.0.1
 https://app.netlify.com/sites/incatrex-opinion-ate/deploys
 
 
+## 7. README.cmd
+https://outsidein.dev/vue/2-project-setup.html#filling-in-the-readme
+
+
+## 8. Add E2E test + several unit tests for listing restaurants
+
+https://outsidein.dev/vue/3-vertical-slice.html#end-to-end-test
+https://outsidein.dev/vue/3-vertical-slice.html#stepping-down-to-a-unit-test
+https://outsidein.dev/vue/3-vertical-slice.html#stepping-back-up
+https://outsidein.dev/vue/3-vertical-slice.html#unit-testing-the-store
+https://outsidein.dev/vue/3-vertical-slice.html#creating-the-api-client
+
+* had to add axios:
+```
+yarn add axios
+```
+
+## 9. Refactoring Styles
+https://outsidein.dev/vue/4-refactoring-styles.html#_4-refactoring-styles
+
+* Add Vuetify
+````
+vue add vuetify
+
+```
+
