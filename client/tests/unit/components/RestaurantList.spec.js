@@ -22,7 +22,7 @@ describe('RestaurantList', () => {
   let restaurantsModule;
   let wrapper;
 
-  const mountWithStore = (state = { records, loading: false }) => {
+  const mountWithStore = (state = {records, loading: false}) => {
     restaurantsModule = {
       namespaced: true,
       state,
@@ -45,14 +45,8 @@ describe('RestaurantList', () => {
   });
 
   describe('when loading succeeds', () => {
-
     beforeEach(() => {
       mountWithStore();
-    });
-    
-    it('displays the restaurants', () => {
-      expect(findByTestId(wrapper, 'restaurant', 0).text()).toBe('Sushi Place');
-      expect(findByTestId(wrapper, 'restaurant', 1).text()).toBe('Pizza Place');
     });
 
     it('does not display the loading indicator while not loading', () => {
@@ -61,8 +55,16 @@ describe('RestaurantList', () => {
       );
     });
 
-  });
+    it('does not display the error message', () => {
+      expect(wrapper.find('[data-testid="loading-error"]').exists()).toBe(false);
+    });
 
+    it('displays the restaurants', () => {
+      expect(findByTestId(wrapper, 'restaurant', 0).text()).toBe('Sushi Place');
+      expect(findByTestId(wrapper, 'restaurant', 1).text()).toBe('Pizza Place');
+    });
+
+  });
 
   it('displays the loading indicator while loading', () => {
     mountWithStore({loading: true});
@@ -71,4 +73,14 @@ describe('RestaurantList', () => {
     );
   });
 
+  describe('when loading fails', () => {
+    beforeEach(() => {
+      mountWithStore({loadError: true});
+    });
+
+    it('displays the error message', () => {
+      expect(wrapper.find('[data-testid="loading-error"]').exists()).toBe(true);
+    });
+
+  });
 });

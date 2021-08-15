@@ -87,8 +87,15 @@ yarn add axios
 https://outsidein.dev/vue/4-refactoring-styles.html#_4-refactoring-styles
 
 * Add Vuetify
-````
+```
 vue add vuetify
 
 ```
+
+## 10. Edge Cases - Loading Indicator
+https://outsidein.dev/vue/5-edge-cases.html#loading-indicator
+
+## 11. Error Flag (API Failure)
+https://outsidein.dev/vue/5-edge-cases.html#error-flag
+
 
