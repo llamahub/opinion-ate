@@ -47,7 +47,7 @@
 
 	"mounts": [
 	//	"source=${localEnv:HOME}/dev/pulse,target=/home/pulseaudio/.config/pulse,type=bind,consistency=cached",
-		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
+	//	"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
 	],
 
 }
