@@ -98,4 +98,14 @@ https://outsidein.dev/vue/5-edge-cases.html#loading-indicator
 ## 11. Error Flag (API Failure)
 https://outsidein.dev/vue/5-edge-cases.html#error-flag
 
+## 12. Writing Data - E2E Test
+https://outsidein.dev/vue/6-writing-data.html#end-to-end-test
 
+https://cli.vuejs.org/core-plugins/e2e-cypress.html#injected-commands
+
+```
+yarn test:e2e --headless --spec=creating-a-restaurant.spec.js
+```
+
+## 13. Unit TEsting
+https://outsidein.dev/vue/6-writing-data.html#unit-testing-the-component
