@@ -107,5 +107,8 @@ https://cli.vuejs.org/core-plugins/e2e-cypress.html#injected-commands
 yarn test:e2e --headless --spec=creating-a-restaurant.spec.js
 ```
 
-## 13. Unit TEsting
+## 13. Unit Testing
 https://outsidein.dev/vue/6-writing-data.html#unit-testing-the-component
+
+## 14.  Creating API Method
+https://outsidein.dev/vue/6-writing-data.html#creating-the-api-method
